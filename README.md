@@ -34,7 +34,7 @@ file to any other machine without any problems.
 
 We internally treat the values as floating point.
 Note that python3 floating point values can
-accomodate extraordinarily large (arbitrarily large?)
+accommodate extraordinarily large (arbitrarily large?)
 values without loss.
 
 ## searchgnucash
@@ -117,7 +117,7 @@ on the selected options.
 
 ## searchcash on Macos
 
-One must have Apple command line tools avaailable.
+One must have Apple command line tools available.
 These are free from Apple.
 
 One needs the tool named 'py2app' on Macos to turn
