@@ -127,5 +127,5 @@ One needs the tool named 'py2app' on Macos to turn
 searchcash into a runnable Macos app one can put
 into /Applications and the Apple Dock.
 
-More will be said on this.
+See READMEMAC.md for details.
 
