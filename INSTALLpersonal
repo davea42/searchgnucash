@@ -1,0 +1,7 @@
+# For use on Linux/Unix
+cp searchgnucash.py ~/bin/searchgnucash
+chmod +x ~/bin/searchgnucash
+
+# This is the gui interface.
+cp searchcash.py ~/bin/searchcash
+chmod +x ~/bin/searchcash
