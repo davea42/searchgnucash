@@ -16,7 +16,9 @@ See www.gnucash.org
 Ubuntu:  sudo apt install gnucash
 
 These assume $HOME/searchgnucash.conf has been created
-to specify globally meaningful basic information (see below).
+to specify globally meaningful basic information.
+Use the version in this directory, copy to $HOME, and update
+to match your situation.
 
 An actual gnucash data file consists of gzip'd xml.
 Amounts in the file are expressed (in the xml) as
