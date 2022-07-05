@@ -115,7 +115,7 @@ The pdf is created in the ~/Desktop directory.
 Most useful for reporting a modest-size output based
 on the selected options.
 
-== searchcash on  Macos ==
+## searchcash on Macos
 
 One must have Apple command line tools avaailable.
 These are free from Apple.
