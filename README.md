@@ -93,13 +93,14 @@ other records can be a chore if the sum in a transaction
 splits does not seem to match other relevant data.
 
     searchgnucash  -d 2022-02-24 -s Chase -csv >a.csv
-    #Now read in a.csv with a spreadsheet, such as
-    #soffice, and select comma separation
-    #The split entries will be in a three-column format
-    #with the second column the values.
+    # Now read in a.csv with a spreadsheet, such as
+    # soffice, and select comma separation
+    # The split entries will be in a three-column format
+    # with the second column the values.
     soffice a.csv
-    #Save the spreadsheet (as a .ods, for example)
-    #And add a sum() row to add the entries of interest.
+    # Save the spreadsheet (as a .ods, for example)
+    # And add a sum() cell to add the entries in column
+    # B of interest.
 
 ## searchcash
 
