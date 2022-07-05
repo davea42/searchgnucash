@@ -26,6 +26,7 @@ lets call our local source/buiild area scripts/searchgnucash
 
     cd scripts/searchgnucash
     source venv/bin/activate
+    # The -A is essential. See py2app documentation.
     python3 setup.py py2app -A
 
     # run the new version by 
@@ -36,6 +37,8 @@ lets call our local source/buiild area scripts/searchgnucash
     #install via
     rm -rf /Applications/searchcash.app
     cp -rp searchcash.app  /Applications/
+    chmod +x searchgnucash.py
+    cp -p searchgnucash.py  $HOME/bin/searchgnucash
 
 ## Initial setup:
 

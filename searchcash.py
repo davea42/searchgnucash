@@ -10,12 +10,9 @@ import tkinter as tk
 from tkinter import ttk
 
 #This is the GUI app. The command line
-# version is searchgnucash.py
+# version is searchgnucash (searchgnucash.py)
 
-# Source is q3:/home/davea/misc/cash/searchcash.py
-# The values here useful
-# for passing to scan and/or scanaddpage
-# Geometry is width x height
+# Panel Geometry is width x height
 mygeom="1000x950"
 testing = False
 macos=False
