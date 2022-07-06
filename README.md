@@ -4,12 +4,17 @@ For Version 0.1.0
 
 These are
 programs to allow more targeted searches from a GnuCash
-(the GNU personal accounting program) data file.
+(the GNU accounting program) data file.
+It is a full double-entry bookkeeping system.
 
 While GnuCash has many very useful report options
 its reports do not seem useful for dealing with
-some kinds of problems one encounters.
-Which motivated writing these programs.
+some kinds of problems one encounters in
+doing the bookkeeping.
+Such as reconciling a transaction with many
+entries on a credit card for a month with
+the report from the credit card company.
+Issues like this motivated writing this code.
 
 See www.gnucash.org
 
@@ -56,12 +61,13 @@ To see the available options:
 ### Use Case: Simple Report
 
 For example, to restrict to transactions in 2022
-with the letters PG in a description or memo field:
-Multiple -s  options are allowed.
+with the letter pair PG in a description or memo field:
 
     searchgnucash -d 2022 -s PG
     # To look for all transactions with value 255.41
     searchgnucash -s 255.41
+
+Multiple -s  options are allowed.
 
 ### Use Case: Comparison
 
@@ -69,10 +75,11 @@ Assuming you have two GnuCash files (lets
 call them a.gnucash and b.gnucash) with slightly different
 content and one is not sure
 where there is any difference (but hopefully not
-thousands!!)  one can see the differences easily.
+thousands of differences!!)
+one can see the differences easily.
 
-    searchgnucash a.gnucash  >a.temp
-    searchgnucash b.gnucash  >b.temp
+    searchgnucash -f a.gnucash  >a.temp
+    searchgnucash -f b.gnucash  >b.temp
     # then
     diff   a.temp b.temp
     # or use a graphical diff, for example:
@@ -92,15 +99,18 @@ or so) reconciling with
 other records can be a chore if the sum in a transaction
 splits does not seem to match other relevant data.
 
+Here searching the gnucash file named 
+in $HOME/searchgnucash.conf:
+
     searchgnucash  -d 2022-02-24 -s Chase -csv >a.csv
     # Now read in a.csv with a spreadsheet, such as
-    # soffice, and select comma separation
+    # soffice, and select comma separation.
     # The split entries will be in a three-column format
     # with the second column the values.
     soffice a.csv
     # Save the spreadsheet (as a .ods, for example)
-    # And add a sum() cell to add the entries in column
-    # B of interest.
+    # And add a sum() cell to add the entries 
+    # of interest from column B.
 
 ## searchcash
 
@@ -111,12 +121,17 @@ It's main panel allows entry of search terms, dates, and more.
 Click 'Quit' to exit the program.
 
 Much of what searchgnucash can create is reportable and
-this program assumes that a pdf output is desired for
-to a graphical/click based use then plain text.
+searchcash assumes that a pdf output is desired
+rather than plain text.
 The pdf is created in the ~/Desktop directory.
 
-Most useful for reporting a modest-size output based
+This is most useful for reporting a modest-size output based
 on the selected options.
+
+The appearance of the 
+panel is automatically 
+consistent  with other graphical panels
+of whatever OS you are running (Linux,Windows,Macos).
 
 ## searchcash on Macos
 
@@ -128,4 +143,3 @@ searchcash into a runnable Macos app one can put
 into /Applications and the Apple Dock.
 
 See READMEMAC.md for details.
-
