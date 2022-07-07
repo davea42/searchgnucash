@@ -59,9 +59,13 @@ It uses $HOME/searchgnucash.conf to find a default
 GnuCash file to read, but one can use the -f option
 to name another file to read.
 
-To see all the available options:
+To see all the available options with explanatory
+details:
 
     searchgnucash -h
+
+If parts of that are unclear consider posting an issue
+on github explaining what is confusing.
 
 ### Use Case: Simple Report
 
