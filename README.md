@@ -5,15 +5,18 @@ For Version 0.1.0
 These are
 programs to allow more targeted searches from a GnuCash
 (the GNU accounting program) data file.
-It is a full double-entry bookkeeping system.
+GnuCash is a full double-entry bookkeeping system.
 
 While GnuCash has many very useful report options
 its reports do not seem useful for dealing with
 some kinds of problems one encounters in
 doing the bookkeeping.
-Such as reconciling a transaction with many
-entries on a credit card for a month with
+For example, reconciling a transaction with many
+entries (called 'splits') on a credit card for a month with
 the report from the credit card company.
+Or when one thinks one's own typo (possibly in a date)
+has caused a tranaction to move to an unexpected place
+and you need to find it.
 Issues like this motivated writing this code.
 
 See www.gnucash.org
@@ -86,6 +89,11 @@ content and one is not sure
 where there is any difference (but hopefully not
 thousands of differences!!)
 one can see the differences easily.
+Of course usual options such as -s and -d etc
+allow more selectivity when you know more precisely
+where to find differences of interest.
+One has to do regular (frequent) backups of the
+gnucash data file for this to be of much use.
 
     searchgnucash -f a.gnucash  >a.temp
     searchgnucash -f b.gnucash  >b.temp
@@ -113,7 +121,8 @@ in $HOME/searchgnucash.conf:
 
     searchgnucash  -d 2022-02-24 -s Chase -csv >a.csv
     # Now read in a.csv with a spreadsheet, such as
-    # soffice, and select comma separation.
+    # soffice, and select only comma separation of fields when
+    # the spreadsheet program asks how to deal with the csv.
     # The split entries will be in a three-column format
     # with the second column the values.
     soffice a.csv
