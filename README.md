@@ -25,36 +25,41 @@ to specify globally meaningful basic information.
 Use the version in this directory, copy to $HOME, and update
 to match your situation.
 
+Python3 defaults to UTF-8 characters so the content is not
+restricted to ASCII.
+
 An actual gnucash data file consists of gzip'd xml.
 Amounts in the file are expressed (in the xml) as
 rational numbers such as   <value>1123/100</value> 
 meaning USD11.23 here (applicable
 to US Dollars or any currency with 100 'pennies'
-per basic unit, dollars here).
+per basic unit).
 This approach GnuCash has taken
 lends itself to any currency, though
 the programs here are expecting USD values.
-
-Since all is plain text xml one can copy or
-move a GnuCash
-file to any other machine without any problems.
+See the function 'stdval()' in searchgnucash.py, the
+only place where the issue arises.
 
 We internally treat the values as floating point.
-Note that python3 floating point values can
+Note that python3 floating point can
 accommodate extraordinarily large (arbitrarily large?)
 values without loss.
+
+Since the gnucash data file is plain text xml one can copy or
+move a GnuCash file to any other machine (of any endianness)
+without problems.
 
 ## searchgnucash
 
 This is the command line program, it produces text output.
-It produces selected results in a pleasant
+It produces results in a pleasant
 human-readable format.
 
 It uses $HOME/searchgnucash.conf to find a default
 GnuCash file to read, but one can use the -f option
 to name another file to read.
 
-To see the available options:
+To see all the available options:
 
     searchgnucash -h
 
