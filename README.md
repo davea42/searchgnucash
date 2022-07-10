@@ -3,30 +3,46 @@
 For Version 0.1.0
 
 These are
-programs to allow more targeted searches from a GnuCash
-(the GNU accounting program) data file.
-GnuCash is a full double-entry bookkeeping system.
+programs to allow very specific searches from a GnuCash
+data file with optional selection
+criteria of strings, dates, accounts, and more.. 
 
-While GnuCash has many very useful report options
+GnuCash is a full double-entry bookkeeping system
+and yet is easy to use by nearly anyone.
+All data you put in is under your control on your computer
+and it is easy to extract when and if you want to switch
+to some other system.
+Proprietary accounting systems often provide no practical
+way to extract your data out of its files (locking you in).
+
+While GnuCash has many very essential and useful
+report options
 its reports do not seem useful for dealing with
-some kinds of problems one encounters in
-doing the bookkeeping.
+some kinds of problems relating to single
+transactions in doing one's personal bookkeeping.
+
+The report(s) searchgnucash provides are intended to
+be concise and readable yet suffiently complete for
+immediate use.
+
 For example, reconciling a transaction with many
-entries (called 'splits') on a credit card for a month with
-the report from the credit card company.
+entries (called 'splits' GnuCash) on a credit card for a month with
+the report from the credit card company can be difficult
+when comparing two lists of thirty items (lists usually not
+in the same order!).
 Or when one thinks one's own typo (possibly in a date)
 has caused a tranaction to move to an unexpected place
 and you need to find it.
 Issues like this motivated writing this code.
 
-See www.gnucash.org
+See www.gnucash.org for documentation and more.
 
 Ubuntu:  sudo apt install gnucash
 
-These assume $HOME/searchgnucash.conf has been created
+Searchgnucash requires $HOME/searchgnucash.conf be created
 to specify globally meaningful basic information.
-Use the version in this directory, copy to $HOME, and update
-to match your situation.
+Copy searchgnucash.conf from the source to $HOME, and update
+$HOME/searchgnucash.conf to match your situation.
 
 Python3 defaults to UTF-8 characters so the content is not
 restricted to ASCII.
